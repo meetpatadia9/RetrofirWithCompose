@@ -25,9 +25,10 @@ class MainActivity : ComponentActivity() {
             .build()
             .create(GetQuote::class.java)
 
-        retrofitBuilder.getQuotes()
+        retrofitBuilder.getQuotes(100)
             .enqueue(object : Callback<QuoteMainDataClass?> {
                 override fun onResponse(call: Call<QuoteMainDataClass?>, response: Response<QuoteMainDataClass?>) {
+                    Log.d("onResponse: ", response.body()!!.quotes.size.toString())
                     setContent {
                         RetrofirWithComposeTheme {
                             QuoteList(quoteMainDataClass = response.body()!!)

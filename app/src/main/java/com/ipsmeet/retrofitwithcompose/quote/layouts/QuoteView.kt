@@ -49,7 +49,8 @@ fun QuoteView(quote: String, author: String) {
                 text = quote,
                 fontSize = 24.sp,
                 style = MaterialTheme.typography.labelMedium,
-                lineHeight = 25.sp
+                lineHeight = 24.sp,
+                letterSpacing = 0.15.sp
             )   // text - quote
             Text(
                 text = author,
