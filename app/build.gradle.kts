@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.ipsmeet.retrofirwithcompose"
+    namespace = "com.ipsmeet.retrofitwithcompose"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.ipsmeet.retrofirwithcompose"
+        applicationId = "com.ipsmeet.retrofitwithcompose"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

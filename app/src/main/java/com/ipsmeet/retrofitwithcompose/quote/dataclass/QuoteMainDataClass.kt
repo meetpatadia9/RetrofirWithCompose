@@ -1,4 +1,4 @@
-package com.ipsmeet.retrofirwithcompose.quote.dataclass
+package com.ipsmeet.retrofitwithcompose.quote.dataclass
 
 data class QuoteMainDataClass(
     val limit: Int,

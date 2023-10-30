@@ -1,4 +1,4 @@
-package com.ipsmeet.retrofirwithcompose
+package com.ipsmeet.retrofitwithcompose
 
 import org.junit.Test
 

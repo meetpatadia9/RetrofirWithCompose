@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "RetrofirWithCompose"
+rootProject.name = "RetrofitWithCompose"
 include(":app")
  

@@ -1,6 +1,6 @@
-package com.ipsmeet.retrofirwithcompose.quote
+package com.ipsmeet.retrofitwithcompose.quote
 
-import com.ipsmeet.retrofirwithcompose.quote.dataclass.QuoteMainDataClass
+import com.ipsmeet.retrofitwithcompose.quote.dataclass.QuoteMainDataClass
 import retrofit2.Call
 import retrofit2.http.GET
 

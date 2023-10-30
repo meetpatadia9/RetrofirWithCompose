@@ -1,4 +1,4 @@
-package com.ipsmeet.retrofirwithcompose.ui.theme
+package com.ipsmeet.retrofitwithcompose.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

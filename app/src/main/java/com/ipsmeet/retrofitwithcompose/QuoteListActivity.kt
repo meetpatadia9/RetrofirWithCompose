@@ -1,14 +1,14 @@
-package com.ipsmeet.retrofirwithcompose
+package com.ipsmeet.retrofitwithcompose
 
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.ipsmeet.retrofirwithcompose.BaseURLs.DUMMY_JSON_BASE_URL
-import com.ipsmeet.retrofirwithcompose.quote.GetQuote
-import com.ipsmeet.retrofirwithcompose.quote.dataclass.QuoteMainDataClass
-import com.ipsmeet.retrofirwithcompose.quote.layouts.QuoteList
-import com.ipsmeet.retrofirwithcompose.ui.theme.RetrofirWithComposeTheme
+import com.ipsmeet.retrofitwithcompose.BaseURLs.DUMMY_JSON_BASE_URL
+import com.ipsmeet.retrofitwithcompose.quote.GetQuote
+import com.ipsmeet.retrofitwithcompose.quote.dataclass.QuoteMainDataClass
+import com.ipsmeet.retrofitwithcompose.quote.layouts.QuoteList
+import com.ipsmeet.retrofitwithcompose.ui.theme.RetrofirWithComposeTheme
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

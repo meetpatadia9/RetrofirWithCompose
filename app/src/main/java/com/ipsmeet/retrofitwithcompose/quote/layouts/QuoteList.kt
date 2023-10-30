@@ -1,4 +1,4 @@
-package com.ipsmeet.retrofirwithcompose.quote.layouts
+package com.ipsmeet.retrofitwithcompose.quote.layouts
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -8,9 +8,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.ipsmeet.retrofirwithcompose.quote.dataclass.QuoteDataClass
-import com.ipsmeet.retrofirwithcompose.quote.dataclass.QuoteMainDataClass
-import com.ipsmeet.retrofirwithcompose.ui.theme.RetrofirWithComposeTheme
+import com.ipsmeet.retrofitwithcompose.quote.dataclass.QuoteDataClass
+import com.ipsmeet.retrofitwithcompose.quote.dataclass.QuoteMainDataClass
+import com.ipsmeet.retrofitwithcompose.ui.theme.RetrofirWithComposeTheme
 
 @Composable
 fun QuoteList(quoteMainDataClass: QuoteMainDataClass) {

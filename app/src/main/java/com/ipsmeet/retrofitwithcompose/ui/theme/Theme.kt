@@ -1,4 +1,4 @@
-package com.ipsmeet.retrofirwithcompose.ui.theme
+package com.ipsmeet.retrofitwithcompose.ui.theme
 
 import android.app.Activity
 import android.os.Build
