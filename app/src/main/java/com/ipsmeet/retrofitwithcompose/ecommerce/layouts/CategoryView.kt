@@ -13,19 +13,14 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun CategoryView(category: String) {
     Card(
-        elevation = CardDefaults.cardElevation(
-            defaultElevation = 5.dp
-        ),
-        modifier = Modifier
-            .padding(horizontal = 5.dp, vertical = 5.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
+        modifier = Modifier.padding(horizontal = 5.dp)
     ) {
         Text(
             text = category,
             modifier = Modifier
                 .padding(2.dp)
-                .background(
-                    color = MaterialTheme.colorScheme.surfaceVariant,
-                )
+                .background(color = MaterialTheme.colorScheme.surfaceVariant)
                 .padding(5.dp)
         )
     }
@@ -34,7 +29,7 @@ fun CategoryView(category: String) {
 //@Preview
 //@Composable
 //fun PreviewCategoryView() {
-//    RetrofirWithComposeTheme {
+//    RetrofitWithComposeTheme {
 //        CategoryView()
 //    }
 //}

@@ -38,7 +38,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun RetrofirWithComposeTheme(
+fun RetrofitWithComposeTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
@@ -57,8 +57,8 @@ fun RetrofirWithComposeTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
+            window.statusBarColor = colorScheme.primaryContainer.toArgb()     //status-bar color
+            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = !darkTheme     //status-bar text color
         }
     }
 
@@ -67,4 +67,5 @@ fun RetrofirWithComposeTheme(
         typography = Typography,
         content = content
     )
+
 }

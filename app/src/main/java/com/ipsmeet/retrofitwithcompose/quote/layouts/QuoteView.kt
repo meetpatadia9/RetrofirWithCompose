@@ -18,7 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ipsmeet.retrofitwithcompose.R
-import com.ipsmeet.retrofitwithcompose.ui.theme.RetrofirWithComposeTheme
+import com.ipsmeet.retrofitwithcompose.ui.theme.RetrofitWithComposeTheme
 
 @Composable
 fun QuoteView(quote: String, author: String) {
@@ -65,7 +65,7 @@ fun QuoteView(quote: String, author: String) {
 @Preview(showBackground = true)
 @Composable
 fun PreviewQuoteView() {
-    RetrofirWithComposeTheme {
+    RetrofitWithComposeTheme {
         QuoteView("Dummy Quote", "Meet Patadia")
     }
 }

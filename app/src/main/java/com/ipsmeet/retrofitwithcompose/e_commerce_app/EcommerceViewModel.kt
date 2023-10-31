@@ -50,18 +50,6 @@ class EcommerceViewModel : ViewModel() {
                     Log.e("onFailure: products", t.message.toString())
                 }
             })
-
-        /*categories.getCategories()
-            .enqueue(object : Callback<List<Categories>?> {
-                override fun onResponse(call: Call<List<Categories>?>, response: Response<List<Categories>?>) {
-                    Log.d("onResponse: categories", response.body().toString())
-                    _categories.value = response.body()!!
-                }
-
-                override fun onFailure(call: Call<List<Categories>?>, t: Throwable) {
-                    Log.e("onFailure: products", t.message.toString())
-                }
-            })*/
     }
 
     private fun fetchProducts() {

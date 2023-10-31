@@ -10,7 +10,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.ipsmeet.retrofitwithcompose.quote.dataclass.QuoteDataClass
 import com.ipsmeet.retrofitwithcompose.quote.dataclass.QuoteMainDataClass
-import com.ipsmeet.retrofitwithcompose.ui.theme.RetrofirWithComposeTheme
+import com.ipsmeet.retrofitwithcompose.ui.theme.RetrofitWithComposeTheme
 
 @Composable
 fun QuoteList(quoteMainDataClass: QuoteMainDataClass) {
@@ -32,7 +32,7 @@ fun PreviewQuoteList() {
         QuoteDataClass(3, "Quote #3", "Author #3")
     )
 
-    RetrofirWithComposeTheme {
+    RetrofitWithComposeTheme {
         QuoteList(
             QuoteMainDataClass(
                 limit = 30,

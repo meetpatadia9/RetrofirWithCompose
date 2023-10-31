@@ -8,7 +8,7 @@ import com.ipsmeet.retrofitwithcompose.BaseURLs.DUMMY_JSON_BASE_URL
 import com.ipsmeet.retrofitwithcompose.quote.GetQuote
 import com.ipsmeet.retrofitwithcompose.quote.dataclass.QuoteMainDataClass
 import com.ipsmeet.retrofitwithcompose.quote.layouts.QuoteList
-import com.ipsmeet.retrofitwithcompose.ui.theme.RetrofirWithComposeTheme
+import com.ipsmeet.retrofitwithcompose.ui.theme.RetrofitWithComposeTheme
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -30,7 +30,7 @@ class QuoteListActivity : ComponentActivity() {
                 override fun onResponse(call: Call<QuoteMainDataClass?>, response: Response<QuoteMainDataClass?>) {
                     Log.d("onResponse: ", response.body()!!.quotes.size.toString())
                     setContent {
-                        RetrofirWithComposeTheme {
+                        RetrofitWithComposeTheme {
                             QuoteList(quoteMainDataClass = response.body()!!)
                         }
                     }

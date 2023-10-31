@@ -15,9 +15,9 @@ import com.ipsmeet.retrofitwithcompose.ecommerce.dataclass.Product
 fun ProductList(products: List<Product>) {
     LazyVerticalGrid(
         columns = GridCells.Adaptive(150.dp),
-        verticalArrangement = Arrangement.spacedBy(15.dp),
-        horizontalArrangement = Arrangement.spacedBy(15.dp),
-        modifier = Modifier.padding(15.dp),
+        verticalArrangement = Arrangement.spacedBy(25.dp),
+        horizontalArrangement = Arrangement.spacedBy(10.dp),
+        modifier = Modifier.padding(top = 15.dp, start = 10.dp, end = 10.dp),
         state = rememberLazyGridState()
     ) {
         items(products) {
@@ -27,14 +27,14 @@ fun ProductList(products: List<Product>) {
                 description = it.description,
                 price = it.price
             )
-        }
-    }
+        }   // items
+    }   // lazy-vertical-grid
 }
 
 //@Preview(showBackground = true)
 //@Composable
 //fun PreviewProductList() {
-//    RetrofirWithComposeTheme {
+//    RetrofitWithComposeTheme {
 //        ProductList()
 //    }
 //}
