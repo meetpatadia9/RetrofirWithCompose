@@ -1,9 +1,10 @@
 package com.ipsmeet.retrofitwithcompose.ecommerce.layouts
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -37,14 +38,24 @@ fun HomeScreen(ecommerceViewModel: EcommerceViewModel = viewModel()) {
             )
         }
     ) {
-        Column(
-            modifier = Modifier
-                .background(MaterialTheme.colorScheme.background)
-                .padding(it)
-                .fillMaxSize()
-        ) {
+        NestedScrolling(it, ecommerceViewModel)
+    }
+}
+
+@Composable
+private fun NestedScrolling(
+    it: PaddingValues,
+    ecommerceViewModel: EcommerceViewModel,
+) {
+    LazyColumn(
+        modifier = Modifier
+            .background(MaterialTheme.colorScheme.background)
+            .padding(it)
+            .fillMaxSize()
+    ) {
+        item {
             CategoryList(categories = ecommerceViewModel.categories.value)
-            ProductList(products = ecommerceViewModel.products.value)
         }
+            productList(products = ecommerceViewModel.products.value)
     }
 }

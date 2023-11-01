@@ -9,10 +9,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
@@ -21,7 +23,7 @@ import com.ipsmeet.retrofitwithcompose.ui.theme.RetrofitWithComposeTheme
 @Composable
 fun ProductView(img: String, title: String, description: String, price: Int) {
     Column(
-        Modifier.width(120.dp)
+        Modifier.width(150.dp)
     ) {
         AsyncImage(
             model = img,

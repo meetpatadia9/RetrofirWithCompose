@@ -1,34 +1,54 @@
 package com.ipsmeet.retrofitwithcompose.ecommerce.layouts
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.grid.GridCells
-import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.grid.rememberLazyGridState
-import androidx.compose.runtime.Composable
+import androidx.compose.foundation.lazy.LazyListScope
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.ipsmeet.retrofitwithcompose.ecommerce.dataclass.Product
 
-@Composable
-fun ProductList(products: List<Product>) {
-    LazyVerticalGrid(
-        columns = GridCells.Adaptive(150.dp),
-        verticalArrangement = Arrangement.spacedBy(25.dp),
-        horizontalArrangement = Arrangement.spacedBy(10.dp),
-        modifier = Modifier.padding(top = 15.dp, start = 10.dp, end = 10.dp),
-        state = rememberLazyGridState()
-    ) {
-        items(products) {
-            ProductView(
-                img = it.thumbnail,
-                title = it.title,
-                description = it.description,
-                price = it.price
-            )
-        }   // items
-    }   // lazy-vertical-grid
+
+fun LazyListScope.productList(products: List<Product>, modifier: Modifier = Modifier) {
+    val rows = (products.size + 1) / 2
+
+    for (row in 0 until rows) {
+        item {
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 15.dp, start = 10.dp, end = 10.dp)
+            ) {
+                val startIndex = row * 2
+                val endIndex = minOf(startIndex + 2, products.size)
+
+                for (i in startIndex until endIndex) {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.SpaceBetween,
+                        modifier = modifier
+                            .weight(1f)
+                            .padding(10.dp)
+                    ) {
+                        ProductView(
+                            img = products[i].thumbnail,
+                            title = products[i].title,
+                            description = products[i].description,
+                            price = products[i].price
+                        )
+                        Spacer(modifier = Modifier.height(25.dp))
+                    }
+                }
+            }
+        }
+    }
 }
 
 //@Preview(showBackground = true)
