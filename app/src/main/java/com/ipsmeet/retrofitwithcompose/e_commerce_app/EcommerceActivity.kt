@@ -12,7 +12,7 @@ class EcommerceActivity : ComponentActivity() {
 
         setContent {
             RetrofitWithComposeTheme {
-                HomeScreen()
+                HomeScreen(this)
             }
         }
     }

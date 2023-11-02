@@ -1,6 +1,7 @@
 package com.ipsmeet.retrofitwithcompose.ecommerce.layouts
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -11,10 +12,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun CategoryView(category: String) {
+fun CategoryView(category: String, onItemClick: () -> Unit) {
     Card(
         elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
-        modifier = Modifier.padding(horizontal = 5.dp)
+        modifier = Modifier
+            .padding(horizontal = 5.dp)
+            .clickable { onItemClick() }
     ) {
         Text(
             text = category,

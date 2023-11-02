@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.ipsmeet.retrofitwithcompose.BaseURLs.DUMMY_JSON_BASE_URL
+import com.ipsmeet.retrofitwithcompose.SuperDeclaration.DUMMY_JSON_BASE_URL
 import com.ipsmeet.retrofitwithcompose.quote.GetQuote
 import com.ipsmeet.retrofitwithcompose.quote.dataclass.QuoteMainDataClass
 import com.ipsmeet.retrofitwithcompose.quote.layouts.QuoteList

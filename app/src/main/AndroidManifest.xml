@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RetrofitWithCompose"
         tools:targetApi="31">
+        <activity android:name=".e_commerce_app.ProductDetailActivity"/>
         <activity android:name=".QuoteListActivity"/>
         <activity
             android:name=".e_commerce_app.EcommerceActivity"

@@ -1,5 +1,6 @@
 package com.ipsmeet.retrofitwithcompose.ecommerce.layouts
 
+import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -13,6 +14,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ipsmeet.retrofitwithcompose.R
@@ -20,8 +22,7 @@ import com.ipsmeet.retrofitwithcompose.e_commerce_app.EcommerceViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeScreen(ecommerceViewModel: EcommerceViewModel = viewModel()) {
-
+fun HomeScreen(context: Context, ecommerceViewModel: EcommerceViewModel = viewModel()) {
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
@@ -35,15 +36,16 @@ fun HomeScreen(ecommerceViewModel: EcommerceViewModel = viewModel()) {
                         style = MaterialTheme.typography.titleMedium
                     )
                 }
-            )
+            )   // center-aligned-top-app-bar
         }
     ) {
-        NestedScrolling(it, ecommerceViewModel)
+        NestedScrolling(context, it, ecommerceViewModel)
     }
 }
 
 @Composable
 private fun NestedScrolling(
+    context: Context,
     it: PaddingValues,
     ecommerceViewModel: EcommerceViewModel,
 ) {
@@ -54,8 +56,8 @@ private fun NestedScrolling(
             .fillMaxSize()
     ) {
         item {
-            CategoryList(categories = ecommerceViewModel.categories.value)
+            CategoryList(LocalContext.current, categories = ecommerceViewModel.categories.value)
         }
-            productList(products = ecommerceViewModel.products.value)
+        productList(context, ecommerceViewModel.products.value)
     }
 }

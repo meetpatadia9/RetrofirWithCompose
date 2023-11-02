@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.ipsmeet.retrofitwithcompose.BaseURLs
+import com.ipsmeet.retrofitwithcompose.SuperDeclaration
 import com.ipsmeet.retrofitwithcompose.ecommerce.GetCategories
 import com.ipsmeet.retrofitwithcompose.ecommerce.GetProducts
 import com.ipsmeet.retrofitwithcompose.ecommerce.dataclass.Categories
@@ -33,7 +33,7 @@ class EcommerceViewModel : ViewModel() {
     private fun fetchCategories() {
         val categories = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BaseURLs.DUMMY_JSON_BASE_URL)
+            .baseUrl(SuperDeclaration.DUMMY_JSON_BASE_URL)
             .build()
             .create(GetCategories::class.java)
 
@@ -55,7 +55,7 @@ class EcommerceViewModel : ViewModel() {
     private fun fetchProducts() {
         val products = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BaseURLs.DUMMY_JSON_BASE_URL)
+            .baseUrl(SuperDeclaration.DUMMY_JSON_BASE_URL)
             .build()
             .create(GetProducts::class.java)
 

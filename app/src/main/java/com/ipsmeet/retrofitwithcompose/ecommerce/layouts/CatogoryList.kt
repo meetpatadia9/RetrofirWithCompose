@@ -1,5 +1,6 @@
 package com.ipsmeet.retrofitwithcompose.ecommerce.layouts
 
+import android.content.Context
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -9,11 +10,16 @@ import androidx.compose.ui.unit.dp
 import com.ipsmeet.retrofitwithcompose.ecommerce.dataclass.Categories
 
 @Composable
-fun CategoryList(categories: List<Categories>) {
-    LazyRow(Modifier.padding(start = 5.dp, top = 10.dp)) {
-        items(categories) {
-            for (i in it) {
-                CategoryView(category = i)
+fun CategoryList(context: Context, categories: List<Categories>) {
+    LazyRow(Modifier.padding(start = 5.dp, top = 15.dp)) {
+        items(categories) { categoryList ->
+            for (category in categoryList) {
+                CategoryView(
+                    category = category,
+                    onItemClick = {
+                        // TODO()
+                    }
+                )
             }
         }
     }
