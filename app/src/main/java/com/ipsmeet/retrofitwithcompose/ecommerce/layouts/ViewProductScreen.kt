@@ -47,7 +47,8 @@ fun ViewProductScreen(product: Product, onBackPress: () -> Unit) {
                             .padding(start = 10.dp)
                             .clickable { onBackPress() }
                     )
-                }
+                },
+                modifier = Modifier.shadow(10.dp)
             )   // center-aligned-top-app-bar
         },
         bottomBar = {

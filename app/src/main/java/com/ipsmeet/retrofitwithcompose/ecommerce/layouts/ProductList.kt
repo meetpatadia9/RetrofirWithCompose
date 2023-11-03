@@ -11,7 +11,7 @@ import androidx.compose.foundation.lazy.LazyListScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.ipsmeet.retrofitwithcompose.e_commerce_app.ProductDetailActivity
+import com.ipsmeet.retrofitwithcompose.ecommerce.activity.ProductDetailActivity
 import com.ipsmeet.retrofitwithcompose.ecommerce.dataclass.Product
 
 fun LazyListScope.productList(
@@ -28,7 +28,7 @@ fun LazyListScope.productList(
                 horizontalArrangement = Arrangement.Center,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(top = 15.dp, start = 10.dp, end = 10.dp),
+                    .padding(top = 15.dp, start = 10.dp, end = 10.dp)
             ) {
                 val startIndex = row * 2
                 val endIndex = minOf(startIndex + 2, products.size)
@@ -37,8 +37,7 @@ fun LazyListScope.productList(
                     Column(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.SpaceBetween,
-                        modifier = modifier
-                            .weight(1f)
+                        modifier = modifier.weight(1f)
                     ) {
                         ProductView(
                             product = products[i],

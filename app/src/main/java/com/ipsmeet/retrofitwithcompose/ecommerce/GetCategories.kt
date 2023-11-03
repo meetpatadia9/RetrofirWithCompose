@@ -5,8 +5,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface GetCategories {
-
     @GET("/products/categories")
     fun getCategories(): Call<Categories>
-
 }

@@ -6,10 +6,8 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface GetProducts {
-
     @GET("/products")
     fun getProducts(
         @Query("limit") limit: Int
     ): Call<EcommerceMainDataClass>
-
 }

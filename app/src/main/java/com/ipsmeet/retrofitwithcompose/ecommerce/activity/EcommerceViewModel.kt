@@ -1,4 +1,4 @@
-package com.ipsmeet.retrofitwithcompose.e_commerce_app
+package com.ipsmeet.retrofitwithcompose.ecommerce.activity
 
 import android.util.Log
 import androidx.compose.runtime.State

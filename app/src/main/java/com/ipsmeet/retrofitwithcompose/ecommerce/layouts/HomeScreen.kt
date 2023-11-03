@@ -14,11 +14,13 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ipsmeet.retrofitwithcompose.R
-import com.ipsmeet.retrofitwithcompose.e_commerce_app.EcommerceViewModel
+import com.ipsmeet.retrofitwithcompose.ecommerce.activity.EcommerceViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -35,7 +37,8 @@ fun HomeScreen(context: Context, ecommerceViewModel: EcommerceViewModel = viewMo
                         text = stringResource(id = R.string.app_name),
                         style = MaterialTheme.typography.titleMedium
                     )
-                }
+                },
+                modifier = Modifier.shadow(10.dp)
             )   // center-aligned-top-app-bar
         }
     ) {

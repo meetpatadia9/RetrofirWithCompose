@@ -55,15 +55,18 @@ fun ViewProduct(product: Product) {
                         .fillMaxWidth()
                 )
             } else {
-                LazyRow(Modifier.height(350.dp)) {
+                LazyRow(
+                    modifier = Modifier.height(300.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
                     items(product.images) {
                         AsyncImage(
                             model = it,
                             contentDescription = "Product images",
-                            contentScale = ContentScale.FillBounds,
+                            contentScale = ContentScale.Fit,
                             modifier = Modifier
                                 .width(300.dp)
-                                .padding(horizontal = 5.dp, vertical = 5.dp)
+                                .padding(horizontal = 6.dp, vertical = 9.dp)
                         )
                     }
                 }   // lazy-row
@@ -76,7 +79,7 @@ fun ViewProduct(product: Product) {
                 fontWeight = FontWeight.SemiBold,
                 modifier = Modifier
                     .padding(20.dp)
-                    .shadow(elevation = 7.dp, shape = CircleShape)
+                    .shadow(elevation = 10.dp, shape = CircleShape)
                     .background(
                         color = MaterialTheme.colorScheme.error,
                         shape = CircleShape
@@ -86,7 +89,7 @@ fun ViewProduct(product: Product) {
             )   // text - discountPercentage
         }   // box
         Column(
-            modifier = Modifier.padding(start = 15.dp, end = 15.dp)
+            modifier = Modifier.padding(top = 20.dp, start = 15.dp, end = 15.dp)
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,

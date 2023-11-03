@@ -1,4 +1,4 @@
-package com.ipsmeet.retrofitwithcompose.e_commerce_app
+package com.ipsmeet.retrofitwithcompose.ecommerce.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
